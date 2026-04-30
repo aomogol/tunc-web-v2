@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TUNÇ Elektronik - İletişim Sayfası">
+  <title>İletişim | TUNÇ Elektronik</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/tunc-fav-logo.jpeg" type="image/jpeg">
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="assets/tunc-logo1.png" alt="TUNÇ Elektronik Logo">
+        <span>TUNÇ</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="products.html">Ürünlerimiz</a></li>
+        <li><a href="about.html">Hakkımızda</a></li>
+        <li><a href="contact.html">İletişim</a></li>
+      </ul>
+
+      <button id="theme-toggle" class="theme-toggle">🌙</button>
+      
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <h1>İletişime Geçin</h1>
+
+    <!-- CONTACT GRID -->
+    <div class="contact-grid">
+      <!-- CONTACT INFO -->
+      <div class="contact-info-box">
+        <h2>İletişim Bilgileri</h2>
+        <div class="contact-channels">
+          <div class="contact-channel">
+            <h3>📧 Email</h3>
+            <p><a href="mailto:info@tunctrade.com">info@tunctrade.com</a></p>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 5px;">⚠️ Lütfen bu linki kendi email adresiniz ile değiştirin</p>
+          </div>
+
+          <div class="contact-channel">
+            <h3>📞 Telefon</h3>
+            <p><a href="tel:+905551234567">xxx xxx xx xx</a></p>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 5px;">⚠️ Lütfen bu numarayı gerçek telefon numaranız ile değiştirin</p>
+          </div>
+
+          <div class="contact-channel">
+            <h3>📍 Adres</h3>
+            <p>
+              TUNÇ Elektronik<br>
+              İstanbul, Türkiye
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 5px;">⚠️ Lütfen tam adresinizi buraya ekleyiniz</p>
+          </div>
+
+          <div class="contact-channel">
+            <h3>💬 WhatsApp</h3>
+            <p><a href="https://wa.me/905551234567" target="_blank">Hızlı Mesaj Gönder</a></p>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 5px;">⚠️ Lütfen WhatsApp numaranızı buraya ekleyiniz</p>
+          </div>
+
+          <div class="contact-channel">
+            <h3>🔗 LinkedIn</h3>
+            <p><a href="https://linkedin.com/company/tunc-elektronik" target="_blank">Bizi Takip Edin</a></p>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 5px;">⚠️ Lütfen LinkedIn profilinizi buraya ekleyiniz</p>
+          </div>
+
+          <div class="contact-channel">
+            <h3>🕐 Çalışma Saatleri</h3>
+            <p>
+              Pazartesi - Cuma: 09:00 - 17:30<br>
+              Cumartesi - Pazar: Kapalı
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 5px;">⚠️ Çalışma saatlerinizi gerekirse düzeltiniz</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div class="contact-form-box">
+        <h2>Bize Mesaj Gönderin</h2>
+        
+        <div class="form-warning">
+          <strong>⚠️ ÖNEMLİ NOT:</strong>
+          İletişim linklerini (Email, Telefon, WhatsApp, LinkedIn) kendi bilgileriniz ile değiştirmeyi unutmayınız!
+        </div>
+
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Ad Soyad *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Adresi *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Telefon Numarası</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Konu</label>
+            <input type="text" id="subject" name="subject">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mesajınız *</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Mesajı Gönder</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 TUNÇ Elektronik. Tüm hakları saklıdır. | <a href="contact.html">İletişim</a> | <a href="about.html">Hakkımızda</a></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

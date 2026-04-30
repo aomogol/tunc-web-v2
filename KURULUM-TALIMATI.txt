@@ -1,0 +1,183 @@
+═══════════════════════════════════════════════════════════════════
+  🚀 TUNÇ ELEKTRONİK - HIZLI KURULUM TALİMATI
+═══════════════════════════════════════════════════════════════════
+
+⚠️ ÖNEMLİ: Dosyaları direktmen tarayıcıda açmayın (file://)
+           Mutlaka bir Web Server kullanın!
+
+═══════════════════════════════════════════════════════════════════
+  WINDOWS KULLANICILAR
+═══════════════════════════════════════════════════════════════════
+
+ADIM 1: Dosyaları İndir
+   → Tüm dosyaları bir klasöre indir (örn: C:\tunc-web\)
+
+ADIM 2: Server'ı Başlat
+   → "start-server.bat" dosyasını çift tıklayın
+   → Komut penceresi açılacak
+
+ADIM 3: Tarayıcıda Açın
+   → http://localhost:8000
+   → Gönderme tuşuna basın
+
+ADIM 4: Server'ı Durdur
+   → Komut penceresinde CTRL + C tuşlarına basın
+
+═══════════════════════════════════════════════════════════════════
+  MAC / LINUX KULLANICILAR
+═══════════════════════════════════════════════════════════════════
+
+ADIM 1: Dosyaları İndir
+   → Tüm dosyaları bir klasöre indir
+
+ADIM 2: Terminal Açın
+   → Spotlight'dan "Terminal" arayın (Mac)
+   → Uygulamalar → Accessories → Terminal (Linux)
+
+ADIM 3: Klasöre Gidin
+   Komut: cd /path/to/tunc-web
+
+   Örnek (Mac):
+   cd /Users/Adınız/Downloads/tunc-web
+
+   Örnek (Linux):
+   cd /home/Adınız/tunc-web
+
+ADIM 4: Server'ı Başlat
+   Komut: ./start-server.sh
+
+   Veya:
+   python3 -m http.server 8000
+
+ADIM 5: Tarayıcıda Açın
+   → http://localhost:8000
+
+ADIM 6: Server'ı Durdur
+   → Terminal'de CTRL + C tuşlarına basın
+
+═══════════════════════════════════════════════════════════════════
+  MANUEL PYTHON KOMUTU (Tüm Sistemler)
+═══════════════════════════════════════════════════════════════════
+
+1. Komut İstemi/Terminal açın
+
+2. Klasöre gidin:
+   cd /path/to/tunc-web
+
+3. Python server başlatın:
+
+   Python 3 ile:
+   python3 -m http.server 8000
+
+   Veya Python 2:
+   python -m SimpleHTTPServer 8000
+
+4. Tarayıcıda açın:
+   http://localhost:8000
+
+═══════════════════════════════════════════════════════════════════
+  PYTHON YÜKLÜ MÜ KONTROL EDIN
+═══════════════════════════════════════════════════════════════════
+
+Windows CMD:
+   python --version
+
+Mac/Linux Terminal:
+   python3 --version
+
+Python yüklü değilse:
+   → https://www.python.org/downloads adresinden indirin
+   → Kurulum sırasında "Add to PATH" seçeneğini işaretleyin
+
+═══════════════════════════════════════════════════════════════════
+  ALTERNATİF: NODE.JS HTTP-SERVER
+═══════════════════════════════════════════════════════════════════
+
+Node.js yüklü ise:
+
+Adım 1: http-server paketini yükleyin
+   npm install -g http-server
+
+Adım 2: Klasöre gidin
+   cd /path/to/tunc-web
+
+Adım 3: Server başlatın
+   http-server
+
+Adım 4: Tarayıcıda açın
+   http://localhost:8080
+
+═══════════════════════════════════════════════════════════════════
+  DOSYA YAPISI KONTROL LİSTESİ
+═══════════════════════════════════════════════════════════════════
+
+Klasörün şu şekilde olması ZORUNLU:
+
+tunc-web/
+├── index.html                ✓ Ana Sayfa
+├── products.html             ✓ Ürünlerimiz
+├── about.html                ✓ Hakkımızda
+├── contact.html              ✓ İletişim
+├── css/
+│   └── styles.css           ✓ Stil Dosyası
+├── js/
+│   └── script.js            ✓ JavaScript
+└── assets/
+    ├── tunc-logo.jpeg       ✓ Logo 1
+    ├── tunc-logo1.png       ✓ Logo 2
+    ├── tunc-logo2-1.png     ✓ Logo 3
+    └── tunc-fav-logo.jpeg   ✓ Favicon
+
+Eksik dosya var mı kontrol edin!
+
+═══════════════════════════════════════════════════════════════════
+  SORUN GIDERME
+═══════════════════════════════════════════════════════════════════
+
+❌ "Port 8000 zaten kullanımda" hatası
+   → Farklı port kullanın:
+   python -m http.server 8001
+   http://localhost:8001 adresine gidin
+
+❌ CSS/JS/Görseller yüklenmiyor
+   → http://localhost:8000 kullandığınızı kontrol edin
+   → file:// KULLANMAYIN
+   → Browser cache'ini temizleyin (CTRL + SHIFT + DEL)
+
+❌ "Command not found: python" hatası
+   → python3 -m http.server 8000 deneyin
+   → Python yüklü mü kontrol edin
+
+❌ Tema toggle çalışmıyor
+   → Browser console'unu açın (F12)
+   → Hatalar var mı kontrol edin
+
+❌ Logolar görünmüyor
+   → assets/ klasöründeki dosyalar var mı kontrol edin
+   → Dosya isimlerini kontrol edin (büyük/küçük harf)
+
+═══════════════════════════════════════════════════════════════════
+  İLK DÜZENLEMELER
+═══════════════════════════════════════════════════════════════════
+
+Site açıldıktan sonra:
+
+1. contact.html düzenleyin:
+   - info@tunctrade.com → Gerçek email
+   - xxx xxx xx xx → Telefon numarası
+   - WhatsApp linki
+   - LinkedIn linki
+   - Adres bilgisi
+
+2. about.html düzenleyin:
+   - Tüm placeholder yazıları kendiniz yazın
+
+═══════════════════════════════════════════════════════════════════
+  BAŞARILILAR! 🎉
+═══════════════════════════════════════════════════════════════════
+
+Site hazır! Yukarıdaki adımları izleyerek başlatın.
+
+Sorularınız varsa README.md dosyasını okuyun.
+
+═══════════════════════════════════════════════════════════════════
