@@ -6,7 +6,10 @@
   <meta name="description" content="TUNÇ Elektronik Ürünlerimiz - Panasonic AM-100 ve elektronik bileşenler">
   <title>Ürünlerimiz | TUNÇ Elektronik</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/carousel.css">
   <link rel="icon" href="assets/tunc-fav-logo.jpeg" type="image/jpeg">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
   <!-- HEADER & NAVIGATION -->
@@ -34,40 +37,152 @@
     </nav>
   </header>
 
-  <!-- PRODUCTS SECTION -->
-  <section class="products-section">
+  <!-- PRODUCTS HERO -->
+  <section class="page-hero">
     <h1>Ürünlerimiz</h1>
+    <p>Panasonic AM-100 ve elektronik bileşenler - Profesyonel kalite, güvenilir hizmet</p>
+  </section>
 
-    <!-- PANASONIC AM-100 -->
+  <!-- PRODUCTS SECTION -->
+  <section class="products-section scroll-fade">
+
+    <!-- PRODUCT CAROUSEL -->
+    <div id="productCarousel" class="product-carousel">
+      <div class="carousel-container">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <div class="carousel-content">
+              <h3>Panasonic AM-100</h3>
+              <p>SMT (Surface Mount Technology) Pick & Place makinesi ile yüksek hızda ve hassas elektronik bileşen yerleştirmesi.</p>
+              <ul style="margin-top: var(--spacing-md); padding-left: var(--spacing-lg);">
+                <li>35,800 CPH hız</li>
+                <li>±40µm hassasiyet</li>
+                <li>0402mm - 120x90x28mm bileşen desteği</li>
+              </ul>
+            </div>
+            <div class="carousel-image">
+              <img src="assets/illustrations-machine.svg" alt="Panasonic AM-100">
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="carousel-content">
+              <h3>Kalite Kontrol & Test</h3>
+              <p>Otomatik Optik Kontrol (AOI) ve fonksiyonel test sistemleri ile %100 kalite güvencesi.</p>
+              <ul style="margin-top: var(--spacing-md); padding-left: var(--spacing-lg);">
+                <li>Otomatik Optik Kontrol</li>
+                <li>Fonksiyonel Test</li>
+                <li>Kusur Raporlama</li>
+              </ul>
+            </div>
+            <div class="carousel-image">
+              <img src="assets/illustrations-quality.svg" alt="Kalite Kontrol">
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="carousel-content">
+              <h3>PCB & Bileşen Tedarik</h3>
+              <p>Profesyonel baskılı devre kartı tasarımı ve elektronik bileşen tedarik hizmetleri.</p>
+              <ul style="margin-top: var(--spacing-md); padding-left: var(--spacing-lg);">
+                <li>PCB Tasarımı & Üretimi</li>
+                <li>Bileşen Tedariki</li>
+                <li>Stok Yönetimi</li>
+              </ul>
+            </div>
+            <div class="carousel-image">
+              <img src="assets/illustrations-pcb.svg" alt="PCB Tedarik">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="carousel-controls">
+        <button class="carousel-btn carousel-btn-prev" aria-label="Önceki">←</button>
+        <button class="carousel-btn carousel-btn-next" aria-label="Sonraki">→</button>
+      </div>
+      
+      <div class="carousel-indicators">
+        <button class="indicator active" aria-label="Slayt 1"></button>
+        <button class="indicator" aria-label="Slayt 2"></button>
+        <button class="indicator" aria-label="Slayt 3"></button>
+      </div>
+    </div>
+
+    <!-- PRODUCT COMPARISON TOOL -->
+    <div class="comparison-section">
+      <h2 style="margin-bottom: var(--spacing-lg);">Ürün Karşılaştırması</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Özellik</th>
+            <th>Panasonic AM-100</th>
+            <th>Reflow Soldering</th>
+            <th>AOI Kontrol</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="spec-name">Otomatik İşlem</td>
+            <td class="spec-value"><span class="spec-check">✓</span></td>
+            <td class="spec-value"><span class="spec-check">✓</span></td>
+            <td class="spec-value"><span class="spec-check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="spec-name">Yüksek Hız</td>
+            <td class="spec-value"><span class="spec-check">✓</span></td>
+            <td class="spec-value"><span class="spec-check">✓</span></td>
+            <td class="spec-value"><span class="spec-check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="spec-name">Hassas Kontrolü</td>
+            <td class="spec-value"><span class="spec-check">✓</span></td>
+            <td class="spec-value"><span class="spec-check">✓</span></td>
+            <td class="spec-value"><span class="spec-check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="spec-name">Kalite Raporu</td>
+            <td class="spec-value"><span class="spec-check">✓</span></td>
+            <td class="spec-value"><span class="spec-cross">–</span></td>
+            <td class="spec-value"><span class="spec-check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="spec-name">Uzun Ömürlü</td>
+            <td class="spec-value"><span class="spec-check">✓</span></td>
+            <td class="spec-value"><span class="spec-check">✓</span></td>
+            <td class="spec-value"><span class="spec-check">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="product-category">
       <h2>Panasonic AM-100 SMT Makinesi</h2>
       <div class="product-grid">
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">🤖</div>
           <h3>Otomatik Pick & Place</h3>
           <p>Yüksek hızda elektronik bileşenleri otomatik olarak baskılı devre kartlarına yerleştirme</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">⚙️</div>
           <h3>Teknoloji Özellikleri</h3>
           <p>0402mm ile 120x90x28mm arasında değişen bileşenleri hassas şekilde yerleştirme kapasitesi</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">📊</div>
           <h3>Yüksek Verimlilik</h3>
           <p>Hızlı changeover ve esnek kurulum seçenekleri ile maksimum üretim verimliliği</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">🎯</div>
           <h3>Hassas Yerleştirme</h3>
           <p>Görüntü işleme teknolojisi ile 20-50 mikrometre hassasiyete kadar yerleştirme</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">🛡️</div>
           <h3>Kalite Kontrolü</h3>
           <p>Otomatik PCB warpage algılama ve tray verification özellikleri ile kalite güvencesi</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">🔄</div>
           <h3>Esneklik</h3>
           <p>Feeder Anywhere ve Nozzle Anywhere özellikleri ile maksimum esneklik ve adaptabilite</p>
@@ -79,42 +194,42 @@
     <div class="product-category">
       <h2>Elektronik Bileşenler</h2>
       <div class="product-grid">
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">💾</div>
           <h3>Entegre Devreler (IC)</h3>
           <p>Mikro işlemciler, hafıza çipleri, kontrolcüler ve diğer entegre devreler</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">🔌</div>
           <h3>Diyotlar</h3>
           <p>Silikon diyotlar, LED'ler, fotodiodlar ve başka diyot türleri</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">⚡</div>
           <h3>Dirençler</h3>
           <p>Film dirençler, karbon dirençler, hassas dirençler ve dirençli ağlar</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">🔋</div>
           <h3>Kapasitörler</h3>
           <p>Elektrolit kapasitörleri, seramik kapasitörler, film kapasitörleri</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">🧲</div>
           <h3>İndüktörler</h3>
           <p>Bobinler, ferritli indüktörler ve yüksek frekans bobinleri</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">📡</div>
           <h3>Tranzistörler</h3>
           <p>BJT tranzistörleri, FET'ler, MOSFET'ler ve diğer yarı iletken cihazları</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">🔗</div>
           <h3>Konektörler</h3>
           <p>Header'lar, soketler, konnektörler ve bağlantı elemanları</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">🖥️</div>
           <h3>Çeşitli Bileşenler</h3>
           <p>Kristal osilatörler, resonatörler, şalterler ve diğer elektronik bileşenler</p>
@@ -126,22 +241,22 @@
     <div class="product-category">
       <h2>Hizmetlerimiz</h2>
       <div class="product-grid">
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">🎨</div>
           <h3>PCB Tasarımı</h3>
           <p>Profesyonel baskılı devre kartı tasarımı ve optimizasyonu</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">🏭</div>
           <h3>PCBA Montajı</h3>
           <p>Tam montaj hizmetlerinden kısmi montaja kadar her türlü çözüm</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">✓</div>
           <h3>Kalite Testleri</h3>
           <p>Fonksiyonel test, AOI (Otomatik Optik Kontrol) ve diğer test prosesleri</p>
         </div>
-        <div class="product-card">
+        <div class="product-card card-stagger">
           <div class="icon">📦</div>
           <h3>Paketleme & Kargo</h3>
           <p>Profesyonel paketleme ve zamanında güvenli kargo hizmetleri</p>
@@ -156,5 +271,7 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/carousel.js"></script>
 </body>
 </html>

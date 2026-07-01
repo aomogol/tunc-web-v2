@@ -1,0 +1,37 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="brand-illustration">
+  <defs>
+    <linearGradient id="pcbGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- PCB Board -->
+  <rect x="50" y="50" width="300" height="200" rx="10" fill="url(#pcbGradient)" opacity="0.9"/>
+  
+  <!-- PCB Traces -->
+  <path d="M 80 80 L 150 80 L 150 120 L 200 120" stroke="#f59e0b" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M 320 100 L 250 100 L 250 150 L 150 150" stroke="#f59e0b" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M 100 200 L 100 150 L 200 150" stroke="#f59e0b" stroke-width="2" fill="none" opacity="0.6"/>
+  
+  <!-- Microchips -->
+  <rect x="140" y="110" width="25" height="25" fill="url(#goldGradient)"/>
+  <rect x="145" y="115" width="15" height="15" fill="#333" opacity="0.7"/>
+  
+  <rect x="240" y="140" width="25" height="25" fill="url(#goldGradient)"/>
+  <rect x="245" y="145" width="15" height="15" fill="#333" opacity="0.7"/>
+  
+  <!-- Components -->
+  <circle cx="180" cy="70" r="5" fill="#f59e0b"/>
+  <circle cx="280" cy="110" r="5" fill="#f59e0b"/>
+  <circle cx="120" cy="190" r="5" fill="#f59e0b"/>
+  
+  <!-- Connection Points -->
+  <circle cx="180" cy="70" r="8" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+  <circle cx="280" cy="110" r="8" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+  <circle cx="120" cy="190" r="8" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+</svg>

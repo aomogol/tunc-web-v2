@@ -16,12 +16,12 @@ if (savedTheme === 'dark') {
 function enableDarkMode() {
   htmlElement.classList.add('dark-mode');
   document.body.classList.add('dark-mode');
-  
+
   // Tüm sayfalardaki bölümleri dark mode'a al
-  document.querySelectorAll('header, .hero, .video-section, .features, .panasonic-spotlight, .products-section, .about-section, .contact-section').forEach(el => {
+  document.querySelectorAll('header, .hero, .page-hero, .video-section, .demo-video-section, .features, .panasonic-spotlight, .process-section, .portfolio-section, .testimonials-section, .products-section, .about-section, .contact-section').forEach(el => {
     el.classList.add('dark-mode');
   });
-  
+
   themeToggle.innerHTML = '☀️';
   localStorage.setItem('theme', 'dark');
 }
@@ -29,11 +29,11 @@ function enableDarkMode() {
 function disableDarkMode() {
   htmlElement.classList.remove('dark-mode');
   document.body.classList.remove('dark-mode');
-  
-  document.querySelectorAll('header, .hero, .video-section, .features, .panasonic-spotlight, .products-section, .about-section, .contact-section').forEach(el => {
+
+  document.querySelectorAll('header, .hero, .page-hero, .video-section, .demo-video-section, .features, .panasonic-spotlight, .process-section, .portfolio-section, .testimonials-section, .products-section, .about-section, .contact-section').forEach(el => {
     el.classList.remove('dark-mode');
   });
-  
+
   themeToggle.innerHTML = '🌙';
   localStorage.setItem('theme', 'light');
 }

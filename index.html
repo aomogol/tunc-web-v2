@@ -8,6 +8,8 @@
   <title>TUNÇ Elektronik | Panasonic AM-100 Baskı Devre Kartı</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="assets/tunc-fav-logo.jpeg" type="image/jpeg">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
   <!-- HEADER & NAVIGATION -->
@@ -56,12 +58,12 @@
   </section>
 
   <!-- PANASONIC SPOTLIGHT -->
-  <section class="panasonic-spotlight">
+  <section class="panasonic-spotlight scroll-fade">
     <div class="panasonic-content">
-      <div class="panasonic-text">
+      <div class="panasonic-text scroll-text-reveal">
         <h2>Panasonic AM-100</h2>
         <p>İleri teknoloji otomasyona sahip SMT (Surface Mount Technology) pick and place makinemiz, yüksek hassasiyet ve hızlı üretim kapasitesi ile sunuyor.</p>
-        
+
         <ul class="panasonic-features">
           <li>0402mm ile 120x90x28mm arasında değişen bileşenleri yerleştirme</li>
           <li>Yüksek hızda ve hassas yerleştirme</li>
@@ -77,12 +79,24 @@
     </div>
   </section>
 
+  <!-- DEMO VIDEO SECTION -->
+  <section class="demo-video-section scroll-fade">
+    <div class="demo-video-container">
+      <h2>Panasonic AM-100 Canlı Demonstrasyon</h2>
+      <p>Makinenin çalışırken nasıl olduğunu görün - Gerçek SMT pick-and-place işlemi</p>
+
+      <div class="video-wrapper">
+        <iframe width="100%" height="600" src="https://www.youtube.com/embed/E1blRcmUe30?rel=0&modestbranding=1" title="Panasonic AM-100 Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
   <!-- FEATURES SECTION -->
-  <section class="features">
+  <section class="features scroll-fade">
     <h2>Neden Biz?</h2>
     <div class="feature-grid">
-      <div class="feature-card">
-        <h3>🔧 Teknoloji</h3>
+      <div class="feature-card card-stagger">
+        <h3>⚙️ Teknoloji</h3>
         <p>Panasonic AM-100 ile güncel teknolojide hassas ve hızlı üretim yapıyoruz. Yüksek kalite ve verimlilik garantili.</p>
       </div>
       <div class="feature-card">
@@ -108,11 +122,115 @@
     </div>
   </section>
 
+  <!-- PROCESS SECTION -->
+  <section class="process-section scroll-fade">
+    <div class="process-container">
+      <h2>Üretim Süreci</h2>
+      <div class="process-grid">
+        <div class="process-step card-stagger">
+          <div class="process-number">1</div>
+          <h3>Tasarım & Hazırlık</h3>
+          <p>PCB tasarımı ve teknik spesifikasyonların detaylı analizi</p>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+          <div class="process-number">2</div>
+          <h3>Bileşen Yerleştirme</h3>
+          <p>Panasonic AM-100 ile hassas pick & place operasyonu</p>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+          <div class="process-number">3</div>
+          <h3>Lehimleme & Kontrol</h3>
+          <p>Reflow soldering ve kalite kontrol testleri</p>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+          <div class="process-number">4</div>
+          <h3>Teslimat</h3>
+          <p>Profesyonel packaging ve güvenli gönderi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section class="portfolio-section scroll-fade">
+    <h2>Son Projelerimiz</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-card card-stagger">
+        <img class="portfolio-image" src="assets/illustrations-quality.svg" alt="Otomatik Optik Kontrol - AOI">
+        <div class="portfolio-content">
+          <h3>🤖 Panasonic AM-100 SMT</h3>
+          <p><strong>Pick & Place:</strong> 0402mm - 120x90x28mm bileşenleri 35,800 cph hızında ±40µm hassasiyetle yerleştirme</p>
+          <span class="portfolio-tag">High Speed • Precision</span>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <img class="portfolio-image" src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop" alt="Reflow Soldering Teknolojisi">
+        <div class="portfolio-content">
+          <h3>🔥 Reflow Soldering</h3>
+          <p><strong>Lehimleme:</strong> Yüksek sıcaklık kontrollü lehimleme prosesi ile profesyonel bağlantı kalitesi</p>
+          <span class="portfolio-tag">Temperature Control • Quality</span>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <img class="portfolio-image" src="https://images.unsplash.com/photo-1516321318423-f06f70fc504e?w=600&h=400&fit=crop" alt="Otomatik Optik Kontrol - AOI">
+        <div class="portfolio-content">
+          <h3>👁️ AOI Kalite Kontrol</h3>
+          <p><strong>Otomatik Optik:</strong> Vision system ile 100% kontrol, kusurlar anında algılanır ve raporlanır</p>
+          <span class="portfolio-tag">Zero Defect • Automated</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="testimonials-section scroll-fade">
+    <h2>Müşteri Görüşleri</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card card-stagger">
+        <div class="testimonial-rating">★★★★★</div>
+        <p>"TUNÇ Elektronik ile çalışmak oldukça profesyonel bir deneyim oldu. Hızlı teslimat ve mükemmel kalite."</p>
+        <div class="testimonial-author">
+          <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" alt="Ahmet Yılmaz">
+          <div>
+            <h4>Ahmet Yılmaz</h4>
+            <p>Proje Müdürü, Tech Industries</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-rating">★★★★★</div>
+        <p>"Yıllardır birlikte çalıştığımız güvenilir bir iş ortağı. Teknik bilgisi ve müşteri odaklı hizmetleri harika."</p>
+        <div class="testimonial-author">
+          <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop" alt="Elif Kaya">
+          <div>
+            <h4>Elif Kaya</h4>
+            <p>Genel Müdür, Electronics Plus</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-rating">★★★★★</div>
+        <p>"Kaliteli iş ve zamanında teslimat. TUNÇ Elektronik bizim tercih ettiğimiz üretici ortağı."</p>
+        <div class="testimonial-author">
+          <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop" alt="Murat Demir">
+          <div>
+            <h4>Murat Demir</h4>
+            <p>CEO, Innovation Corp</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2026 TUNÇ Elektronik. Tüm hakları saklıdır. | <a href="contact.html">İletişim</a> | <a href="about.html">Hakkımızda</a></p>
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/animations.js"></script>
 </body>
 </html>
